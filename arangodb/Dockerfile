@@ -6,14 +6,14 @@ ENV ARANGODB_VERSION=3.12.3
 ENV ARANGODB_HOME=/opt/arangodb
 
 # Instalar dependencias necesarias
-RUN dnf -y update && \
-    dnf -y install wget tar gcc glibc && \
-    dnf clean all
+RUN yum -y update && \
+    yum -y install wget tar gcc glibc && \
+    yum clean all
 
    
 # Descargar e instalar ArangoDB
 RUN wget https://download.arangodb.com/arangodb312/Community/Linux/arangodb3-3.12.3-1.0.x86_64.rpm -O /tmp/arangodb.rpm && \
-    dnf -y localinstall /tmp/arangodb.rpm && \
+    yum -y localinstall /tmp/arangodb.rpm && \
     rm -f /tmp/arangodb.rpm
 
 # Crear un directorio para los datos de ArangoDB
