@@ -6,9 +6,9 @@ ENV CRATE_VERSION=5.3.1
 ENV CRATE_HOME=/opt/crate
 
 # Instalar dependencias necesarias
-RUN yum -y update && \
-    yum -y install java-11-openjdk wget && \
-    yum clean all
+RUN dnf -y update && \
+    dnf -y install java-11-openjdk wget && \
+    dnf clean all
 
 # Descargar e instalar CrateDB
 RUN wget https://cdn.crate.io/downloads/releases/crate-$CRATE_VERSION.tar.gz -O /tmp/crate.tar.gz && \
