@@ -1,0 +1,89 @@
+{
+  "autoDeploy": true,
+  "hotAlignment": true,
+  "executionMode": "asynchronous",
+  "readQuorum": 1,
+  "writeQuorum": "majority",
+  "failureAvailableNodesLessQuorum": false,
+  "readYourWrites": true,
+  "servers": {
+    "*": "master"
+  },
+  "clusters": {
+    "internal": {
+      "servers": ["*"]
+    },
+    "index": {
+      "servers": ["*"]
+    },
+    "customer_north_cluster": {
+      "servers": ["orientdb-node1"]
+    },
+    "post_long_cluster": {
+      "servers": ["orientdb-node1"]
+    },
+    "product_cheap_cluster": {
+      "servers": ["orientdb-node1"]
+    },
+    "customer_center_cluster": {
+      "servers": ["orientdb-node2"]
+    },
+    "post_medium_cluster": {
+      "servers": ["orientdb-node2"]
+    },
+    "order_pre_pandemic_cluster": {
+      "servers": ["orientdb-node2"]
+    },
+    "customer_south_cluster": {
+      "servers": ["orientdb-node3"]
+    },
+    "product_expensive_cluster": {
+      "servers": ["orientdb-node3"]
+    },
+    "order_post_pandemic_cluster": {
+      "servers": ["orientdb-node3"]
+    },
+    "person_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "customer_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "product_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "post_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "order_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "vendor_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "tag_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "feedback_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "invoice_global_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "customer_knows_person_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "person_has_interest_tag_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "post_has_creator_person_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "post_has_tag_cluster": {
+      "servers": ["orientdb-node4"]
+    },
+    "*": {
+      "servers": ["orientdb-node1", "orientdb-node2", "orientdb-node3", "orientdb-node4"]
+    }
+  }
+}
